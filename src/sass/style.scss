@@ -1,0 +1,168 @@
+// @import url("https://overpass-30e2.kxcdn.com/overpass.css");
+
+@font-face {
+	font-family: 'Sulphur Point';
+	font-style: normal;
+	font-weight:400m;
+	src: local('Sulphur Point'),local('Sulphur Point'),url('assets/fonts/SulphurPoint-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Hanley Pro Slim';
+	font-style: normal;
+	font-weight:400m;
+	src: local('Hanley Pro Slim'),local('Hanley Pro Slim'),url('assets/fonts/Hanley-Pro-Slim.otf') format('truetype');
+}
+
+body{
+	font-family:'Sulphur Point';
+font-weight:800;
+}
+
+
+/* SCSS RGB */
+$gunmetal: rgba(34, 56, 67, 1);
+$cultured: rgba(239, 241, 243, 1);
+$light-gray: rgba(219, 211, 216, 1);
+$forest-green-crayola: rgba(87, 167, 115, 1);
+$dark-spring-green: rgba(21, 113, 69, 1);
+$copper: rgba(196, 115, 53, 1);
+
+$appPrimary:$forest-green-crayola;
+$appSecondary:$dark-spring-green;
+$appDark:$gunmetal;
+$appWhite:$cultured;
+$appAlert:$copper;
+
+::selection {
+  background: $appDark; /* WebKit/Blink Browsers */
+  color:$appPrimary;
+}
+::-moz-selection {
+  background: $appDark; /* Gecko Browsers */
+  color:$appWhite;
+}
+
+
+a{
+	color:$appPrimary;
+	&:hover{color:darken($appPrimary	,12%);}
+}
+
+.navbar{background-color:rgba($cultured,.9);}
+
+#map-gauges{
+	// top:2em;
+	position:relative;
+	width:30%;
+	background-color:rgba($cultured,.9);
+	z-index:2;
+
+	.map-gauge-legend-swatch{
+width:40px;height:20px;display:block;
+	}
+}
+
+#map-gauges.splayed{left:20%;}
+
+.bt_baseMap{
+	cursor:pointer;
+
+	border:1px solid $appDark;
+	
+	
+	&:hover{
+		border:2px solid $appWhite;
+	}
+
+}
+
+.bt_baseMap.active{border:3px solid $appAlert;}
+
+.is-disabled{
+color:grey;
+cursor:not-allowed;
+}
+
+
+#map{
+  position:absolute;top:0;height:100%;width:100%;z-index:0;
+}
+
+#konsole-wrapper{
+	z-index:5;
+	min-height:4vh;
+#konsole{
+	min-height:4vh;
+	background-color:$appDark;
+	font-weight:800;
+	color:$appWhite;
+}
+}
+
+.footer{
+	z-index: 7;width:100%;bottom:0;left:0;
+		position:fixed;
+	height:4vh;margin:0;
+	#app-layers{
+		height:4vh;
+	}
+}
+
+#modal-credits{
+	color:white;font-weight:800;
+}
+
+
+/*    _________    ____  ______
+   / ____/   |  / __ \/ ____/
+  / /_  / /| | / / / / __/
+ / __/ / ___ |/ /_/ / /___
+/_/   /_/  |_/_____/_____/
+*/
+
+@keyframes fade {
+	from {opacity:1;}
+	to{opacity:0;}
+}
+
+.faded0{
+	animation-name: fade;
+	animation-fill-mode: forwards;
+	animation-duration: 1s;
+	animation-iteration-count:1;
+}
+
+.faded12{
+	animation-name: fade;
+	animation-fill-mode: forwards;
+	animation-duration: 12s;
+	animation-iteration-count:1;
+}
+
+.faded20{
+	animation-name: fade;
+	animation-fill-mode: forwards;
+	animation-duration: 20s;
+	animation-iteration-count:1;
+}
+
+
+/*
+ ____  __  __  __    __  __    __      _____  _  _  ____  ____  ____  ____  ____  ____  ___
+(  _ \(  )(  )(  )  (  \/  )  /__\    (  _  )( \/ )( ___)(  _ \(  _ \(_  _)(  _ \( ___)/ __)
+ ) _ < )(__)(  )(__  )    (  /(__)\    )(_)(  \  /  )__)  )   / )   / _)(_  )(_) ))__) \__ \
+(____/(______)(____)(_/\/\_)(__)(__)  (_____)  \/  (____)(_)\_)(_)\_)(____)(____/(____)(___/
+*/
+
+/*.navbar-item{
+	&:hover{background-color:none;}
+}
+.navbar-link{
+	&:hover{background-color:none;}
+}*/
+
+
+@import 'assets/fontello/css/fontello.css';
+@import 'assets/bulma-tooltip.min.css';
+@import '~vue-ionicons/ionicons.scss';

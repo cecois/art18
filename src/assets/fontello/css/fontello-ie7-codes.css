@@ -1,0 +1,8 @@
+
+.icon-noun_buffer { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe800;&nbsp;'); }
+.icon-noun_incoming { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe801;&nbsp;'); }
+.icon-noun_history { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe802;&nbsp;'); }
+.icon-noun_proposed { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe803;&nbsp;'); }
+.icon-noun_binoculars { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe804;&nbsp;'); }
+.icon-bug { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf188;&nbsp;'); }
+.icon-tripadvisor { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xf262;&nbsp;'); }
